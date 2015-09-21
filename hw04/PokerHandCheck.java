@@ -15,14 +15,14 @@ there may be, or if there is a three of a kind. One cannot receieve a full house
 public class PokerHandCheck {
     public static void main(String args[]) {
         
-        //Draw cards using a mapped random number generator
+        //Draw 5 cards from different decks using a mapped random number generator
         int card1 = (int)(Math.random()*52 + 1);
         int card2 = (int)(Math.random()*52 + 1);
         int card3 = (int)(Math.random()*52 + 1);
         int card4 = (int)(Math.random()*52 + 1);
         int card5 = (int)(Math.random()*52 + 1);
         
-        //Initiates variables as strings for later use
+        //Initiates variables as strings for later use to identify suits for each card
         String suit1="0";
         String suit2="0";
         String suit3="0";
@@ -176,109 +176,56 @@ public class PokerHandCheck {
         
         //Tests EACH COUNTER (13) for pairs or three of a kinds and increments counters accordingly
         if(num1>1) {
-            if(num1>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num1>2) {triple+=1;}
+            else {pair+=1;}
         }
         if(num2>1) {
-            if(num2>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num2>2) {triple+=1;}
+            else {pair+=1;}
         }
         if(num3>1) {
-            if(num3>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num3>2) {triple+=1;}
+            else {pair+=1;}
         }
-        
         if(num4>1) {
-            if(num4>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num4>2) {triple+=1;}
+            else {pair+=1;}
         }
         if(num5>1) {
-            if(num5>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num5>2) {triple+=1;}
+            else {pair+=1;}
         }
         if(num6>1) {
-            if(num6>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num6>2) {triple+=1;}
+            else {pair+=1;}
         }
         if(num7>1) {
-            if(num7>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num7>2) {triple+=1;}
+            else {pair+=1;}
         }
         if(num8>1) {
-            if(num8>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num8>2) {triple+=1;}
+            else {pair+=1;}
         }
         if(num9>1) {
-            if(num9>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num9>2) {triple+=1;}
+            else {pair+=1;}
         }
         if(num10>1) {
-            if(num10>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num10>2) {triple+=1;}
+            else {pair+=1;}
         }
         if(num11>1) {
-            if(num11>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num11>2) {triple+=1;}
+            else {pair+=1;}
         }
         if(num12>1) {
-            if(num12>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num12>2) {triple+=1;}
+            else {pair+=1;}
         }
         if(num13>1) {
-            if(num13>2) {
-                triple+=1;
-            }
-            else {
-                pair+=1;
-            }
+            if(num13>2) {triple+=1;}
+            else {pair+=1;}
         }
         
         //Tests pair and triple counters for winning hands. Default: high card. Prints results
