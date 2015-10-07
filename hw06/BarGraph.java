@@ -20,21 +20,53 @@ public class BarGraph {
         Scanner input = new Scanner(System.in);
         
         //Get costs for each day of the week stored into identifiers with corresponding day of week
+        
         System.out.print("Expenses for Monday:     $");
         double Mon = input.nextDouble();
+        while(Mon<0) {
+            System.out.print("invalid input, either negative or not a number, try again:   $");
+            Mon = input.nextDouble();
+        }
         System.out.print("Expenses for Tuesday:    $");
         double Tue = input.nextDouble();
+        while(Tue<0) {
+            System.out.print("invalid input, either negative or not a number, try again:   $");
+            Tue = input.nextDouble();
+        }
         System.out.print("Expenses for Wednesday:  $");
         double Wed = input.nextDouble();
+        while(Wed<0) {
+            System.out.print("invalid input, either negative or not a number, try again:   $");
+            Wed = input.nextDouble();
+        }
+        
         System.out.print("Expenses for Thursday:   $");
         double Thu = input.nextDouble();
+        while(Thu<0) {
+            System.out.print("invalid input, either negative or not a number, try again:   $");
+            Thu = input.nextDouble();
+        }
+        
         System.out.print("Expenses for Friday:     $");
         double Fri = input.nextDouble();
+        while(Fri<0) {
+            System.out.print("invalid input, either negative or not a number, try again:   $");
+            Fri = input.nextDouble();
+        }
+        
         System.out.print("Expenses for Saturday:   $");
         double Sat = input.nextDouble();
+        while(Sat<0) {
+            System.out.print("invalid input, either negative or not a number, try again:   $");
+            Sat = input.nextDouble();
+        }
+        
         System.out.print("Expenses for Sunday:     $");
         double Sun = input.nextDouble();
-        
+        while(Sun<0) {
+            System.out.print("invalid input, either negative or not a number, try again:   $");
+            Sun = input.nextDouble();
+        }
         //calculate average daily expenses
         double avg = (Mon+Tue+Wed+Thu+Fri+Sat+Sun)/7.00;
         
