@@ -51,9 +51,6 @@ public class CheckDigit {
             ISBN = Long.parseLong(isbn);
             rem = Integer.parseInt(isbn.substring(9));
         }
-        System.out.println(rem);
-        System.out.println(ISBN);
-        System.out.println(isbn);
         
         //Create variable nisbn to allow for a separate manipulation of the string
         //isbn without modifying original isbn identifier
@@ -61,13 +58,11 @@ public class CheckDigit {
         //a number following the pattern
         long nisbn = ISBN;
         int calculate=0;
-        System.out.println(nisbn+"      nisbn");
         //performs a method that performs algorithms for the pattern for 
         //verifying ISBNs of either 13 digits or 10 digits in length
         for(int i=9; i>0; i--) {
             calculate += (int)(nisbn/Math.pow(10,i))*(i+1);
             nisbn = (long)(ISBN%Math.pow(10,i));
-            System.out.println(calculate+"    "+i);
         }//match for
         
         //calculate the correct remainder and store in remC to compare to rem
