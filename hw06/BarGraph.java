@@ -20,7 +20,7 @@ public class BarGraph {
         Scanner input = new Scanner(System.in);
         
         //Get costs for each day of the week stored into identifiers with corresponding day of week
-        
+        //Loops until a valid number is typed
         System.out.print("Expenses for Monday:     $");
         double Mon = input.nextDouble();
         while(Mon<0) {
