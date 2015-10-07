@@ -174,9 +174,9 @@ public class PokerHandCheck {
         int pair=0;
         int triple=0;
         
-        //Tests EACH COUNTER (13) for pairs or three of a kinds and increments counters accordingly
-        if(num1>1) {
-            if(num1>2) {
+        //Tests EACH COUNTER (13) for pairs OR any three of a kind and increments counters accordingly
+        if(num1>=2) {
+            if(num1>=3) {
                 triple+=1;
             }
             else {
@@ -295,7 +295,6 @@ public class PokerHandCheck {
         else {
             System.out.println("You got high card. Lame.");
         }
-        
         
     }//matching public static void main brace
     
