@@ -55,12 +55,14 @@ public class Twisty {
         int add = 0;
         //BEGIN LOOPING PRINT STATEMENTS
         //first for loop controls the number of lines, the second controls what goes in each line according to modulus arithmetic
+        //the first and last line avoid this method, so they are accounted for in the first two if-statements
         for(int i=1; i<=dWidth; i++) {
             for(int j=1; j<=dLength; j++) {
                 
                 add=(int)(i%(2*dWidth));
-                
-                if(j%(2*dWidth)==add || j%(2*dWidth)==(2*dWidth-add+1)) {System.out.print("#");}
+                if(i==1 && j%(2*dWidth)==0) {System.out.print("#");}
+                else if(i==dWidth && j%(2*dWidth)==0) {System.out.print("\\");}
+                else if(j%(2*dWidth)==add || j%(2*dWidth)==(2*dWidth-add+1)) {System.out.print("#");}
                 else if(j%(2*dWidth)==(dWidth-add+1)) {System.out.print("/");}
                 else if(j%(2*dWidth)==(dWidth+add)) {System.out.print("\\");}
                 else {System.out.print(" ");}
