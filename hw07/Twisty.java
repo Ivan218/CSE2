@@ -51,7 +51,7 @@ public class Twisty {
         }
         //END INPUTS
         
-        
+        //use add to allow for calculations to hit various positions on different lines to create the desired pattern
         int add = 0;
         //BEGIN LOOPING PRINT STATEMENTS
         //first for loop controls the number of lines, the second controls what goes in each line according to modulus arithmetic
@@ -59,21 +59,14 @@ public class Twisty {
             for(int j=1; j<=dLength; j++) {
                 
                 add=(int)(i%(2*dWidth));
-                if(dWidth%2==0) {
-                    if(j%(2*dWidth)==add || j%(2*dWidth)==(2*dWidth-add+1)) {System.out.print("#");}
-                    else if(j%(2*dWidth)==(dWidth-add+1)) {System.out.print("/");}
-                    else if(j%(2*dWidth)==(dWidth+add)) {System.out.print("\\");}
-                    else {System.out.print(" ");}
-                }
-                else {
-                    if(j%(2*dWidth)==add || j%(2*dWidth)==(2*dWidth-add)) {System.out.print("#");}
-                    else if(j%(2*dWidth)==(dWidth-add+1)) {System.out.print("/");}
-                    else if(j%(2*dWidth)==(dWidth+add)) {System.out.print("\\");}
-                    else {System.out.print(" ");}
-                }
-            }
+                
+                if(j%(2*dWidth)==add || j%(2*dWidth)==(2*dWidth-add+1)) {System.out.print("#");}
+                else if(j%(2*dWidth)==(dWidth-add+1)) {System.out.print("/");}
+                else if(j%(2*dWidth)==(dWidth+add)) {System.out.print("\\");}
+                else {System.out.print(" ");}
+            }//inner for loop
             System.out.println();
-        }
+        }//outer for loop
         
         
     }//match main method brace
