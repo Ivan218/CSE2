@@ -46,11 +46,11 @@ public class Area {
             area = AreaCircle();
         }
         System.out.println("The area of the "+shape+" is "+area);
-    }//main method brace
+    }//MAIN METHOD BRACE
     
     
     
-    
+    //This method takes the entered radius of a circle and returns the area
     public static double AreaCircle() {
         //INPUT
         System.out.println("Enter the radius of the circle");
@@ -62,8 +62,7 @@ public class Area {
     }//area of circle method brace
     
     
-    
-    
+    //This method takes the entered dimensions of a rectangle and returns the area
     public static double AreaRect() {
         //INPUT the length and height of the rectangle
         System.out.println("Enter the length of the rectangle");
@@ -75,8 +74,6 @@ public class Area {
         double calculate = length*height;
         return calculate;
     }//area of rectangle method brace
-    
-    
     
     
     //This method takes the input dimensions of a triangle and calculates area of the triangle
@@ -92,8 +89,6 @@ public class Area {
         double calculate = .5*base*height;
         return calculate;
     }//area of triangle method brace
-    
-    
     
     
     
