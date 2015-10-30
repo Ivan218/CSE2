@@ -1,9 +1,9 @@
 /*
 Ivan Rivera
+<<<<<<< HEAD
 Prof. Chen
 CSE002
 lab10 Arrays
-*/
 
 /*
 */
@@ -16,6 +16,7 @@ public class Arrays {
         Scanner input = new Scanner(System.in);
         int size = (int)(Math.random()*5+6);
         String[] students = new String[size];
+
         int[] midterms = new int[size];
         for(int i=0; i<size; i++) {
             System.out.print("Student name: ");
