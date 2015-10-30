@@ -83,7 +83,5 @@ public class CheckDigit {
                 System.out.println("ISBN NUMBER SHOULD BE "+isbn.substring(0,8)+"X");
             }
         }//match if statement
-        
-        
     }//match public static void main method brace
 }//match public class brace

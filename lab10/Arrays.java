@@ -5,7 +5,9 @@ Prof. Chen
 CSE002
 lab10 Arrays
 
-/*
+/* This program creates an array of a size between 5 and 10 randomly, then asks
+for student names from the user and generates random test scores from 0 to 100 and
+prints out the information.
 */
 
 import java.util.Scanner;
