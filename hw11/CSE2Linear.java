@@ -23,6 +23,10 @@ public class CSE2Linear {
         int[] grades = new int[15];
         int temp=0;
         
+        /*This nested craziness uses a for loop to store a qualifying int in every
+        index of the array by looping in a while loop until an appropriate int is
+        typed in. CONDITIONS: 1) Must be an int; 2) Must be between [0,100];
+        3) Must be nonstrictly ascending.*/
         for(int i=0; i<15; i++) {
             while(true) {
                 System.out.print("Input a grade for student "+i+": ");
