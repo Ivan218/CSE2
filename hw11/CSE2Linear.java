@@ -7,7 +7,7 @@ CSE2 Linear program
 /*This program takes 15 int inputs in nonstrictly ascending order, inquires of an
 int to search for, then performs the binary search method in the ordered array of grades,
 followed by the scrambling of the array so the program can perform a necessary linear search
-of the same key
+of a new key
 */
 
 
@@ -62,9 +62,12 @@ public class CSE2Linear {
         int key = input.nextInt();
         binarySearch(grades, key);
         
-        //scramble and print the array then perform a linear search with the same key
+        
+        //scramble and print the array then perform a linear search with the new key
         scramble(grades);
         printArray(grades);
+        System.out.println("What grade would you like to search for?");
+        key = input.nextInt();
         linearSearch(grades, key);
     }//main method
     
