@@ -60,20 +60,18 @@ public class Transpose {
         System.out.println();
     }//printMatrix[][]
     
-    
+    //This method transposes the matrix creating a new matrix to represent the transposed one
     public static int[][] transposeMatrix(int[][] array) {
-        int[][] aT=new int[array[0].length][];
+        int r = array.length;
+        int c = array[r-1].length;
+        int [][] t = new int[c][r];
         
-        for(int i=0; i<array.length; i++) {
-            aT[i]= new int[array.length];
-        }
-        
-        for(int i=0; i<array.length; i++) {
-            for(int j=0; i<array[i].length; j++) {
-                aT[j][i]=array[i][j];
+        for(int i = 0; i < r; ++i) {
+            for(int j = 0; j < c; ++j) {
+                t[j][i] = array[i][j];
             }
         }
-        return aT;
+        return t;
     }//transposeMatrix[][]
     
 }//public class
