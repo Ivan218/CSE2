@@ -53,16 +53,26 @@ public class Search {
             else if(array2[mid]>key) {high=mid;}
             else {low=mid;}
             count++;
-            if(count==15) {break;}
+            if(high>4999) {high=5000; break;}
+            if(count==15) {
+                if(high==4999) {high = 5000; break;}
+                else{break;}
+            }
         }//while loop
         
+        System.out.println("max = "+array2[0]+"; min = "+array2[4999]);
         if(success) {
             System.out.println("The key was found at index: "+mid);
         }
         else {
+            
             System.out.println("The key "+key+" was not found");
-            System.out.println("The number above the key is "+array2[high]);
-            System.out.println("The number below the key is "+array2[low]);
+            System.out.print("The number above the key is ");
+            if(high==5000) {System.out.println("NONE");}
+            else {System.out.println(array2[high]);}
+            System.out.print("The number below the key is ");
+            if(low<0) {System.out.println("NONE");}
+            else {System.out.println(array2[low]);}
         }
     }//main method
 }//public class

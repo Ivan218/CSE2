@@ -72,16 +72,17 @@ public class BinarySort {
     }//sort method
     
     public static int binSearch(int[] array, int key) {
-        int searchParam = makeEvenHalf(array.length);
-        int search=2;
-        while(search<=(int)((array.length+1)/2)) {
-            if(array[searchParam-1]==key)
-                return (searchParam-1);
-            if(array[searchParam-1]<key)
-                searchParam+=makeEvenHalf((array.length)/(search));
-            if(array[searchParam-1]>key)
-                searchParam-=makeEvenHalf((array.length)/(search));
-            search++;
+        int low=0;
+        int high=array.length-1;
+        int mid=(low+high)/2;
+        while(low<=high) {
+            if(key==array[mid]) 
+                return mid;
+            else if(key>array[mid]) 
+                low = mid+1;
+            else 
+                high = mid-1;
+            mid=(low+high)/2;
         }
         return -1;
     }//binSearch method
@@ -91,4 +92,11 @@ public class BinarySort {
         if(num%2==0) {return (num/2);}
         else {return((num+1)/2);}
     }//makeEvenHalf method
+    
+    public static void shuffle(int[] array) {
+        int num;
+        for(int i=0; i<array.length;i++) {
+            num=(int)(Math.random()*array.length);
+        }
+    }
 }//public class

@@ -45,10 +45,10 @@ public class free {
         System.out.println("It took you "+i+" attempts!");
         */
         //an integer to store the user input
-        /*double myDouble = 0.0;
+        double myDouble = 0.0;
 
         //a switch to decide if you want to ask again
-        boolean acceptable = false;
+        
 
         //loop until you get acceptable input (i.e. if it's a double)
         System.out.print("Input your double: ");
@@ -67,7 +67,7 @@ public class free {
                 input.next();
             }
         } 
-        */
+        //*/
         /*
         for(int i=1; i<4; i++) {
             for(int j =1; j<3; j++) {
@@ -98,4 +98,17 @@ public class free {
 	    }
 	    for(int i=0; i<5; i++) {System.out.println("array["+i+"]= "+array[i]);}
     }//main method brace
+    
+    public static int[] createBiggerArray(int[] array1, int[] array2) {
+        int[] array = new int[array1.length+array2.length];
+        
+        for(int i=0; i<array.length; i++) {
+            if(i<array1.length)
+                array[i]=array1[i];
+            else
+                array[i]=array2[i-array1.length];
+        }
+        
+        return array;
+    }
 }//public class brace

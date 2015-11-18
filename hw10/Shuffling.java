@@ -57,7 +57,12 @@ public class Shuffling{
     public static void printArray(String[] array) {
         int size = array.length;
         for(int i=0; i<size; i++) {
-            System.out.print(array[i]+" ");
+            if((i+1)%13==0) {
+                System.out.println(array[i]+" ");
+            }
+            else { 
+                System.out.print(array[i]+" ");
+            }
         }
         System.out.println();
     }//printArray method
@@ -69,14 +74,13 @@ public class Shuffling{
         int size = array.length;
         int num;
         String dingnut="";
-        for(int i=0; i<100; i++) {
-            num = (int)(Math.random()*52);
-            dingnut=array[i%52];
-            array[i%52]=array[num];
-            array[num]=dingnut;
+        for(int i=0; i<array.length; i++) {
+            num = (int)(Math.random()*array.length);
+            dingnut=array[num];
+            array[num]=array[i];
+            array[i]=dingnut;
         }//outer for loop
     }//shuffle method
-    
     
     //This method deals out 5 cards from the shuffled deck to the player
     /*This is accomplished by drawing a random card, replacing the value of the
